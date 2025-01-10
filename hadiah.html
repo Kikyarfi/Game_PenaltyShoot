@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_hadiah.css">
+    <title>Hadiah Game</title>
+    
+</head>
+<body>
+    <div class="background">
+        <div class="text">
+            <!-- <img src="frame_hadiah.png" alt="" class="box"> -->
+            <div class="message" id="resultMessage"></div>
+            <div class="unique-code" id="uniqueCode"></div>
+            <div class="instruction" id="instructionMessage"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const resultMessage = document.getElementById('resultMessage');
+        const uniqueCode = document.getElementById('uniqueCode');
+        const instructionMessage = document.getElementById('instructionMessage');
+
+        // Ambil kode unik dari localStorage
+        const code = localStorage.getItem('uniqueCode');
+        const status = localStorage.getItem('gameStatus');
+
+        // Cek jika ada kode unik
+        if (status == "win") {
+            resultMessage.innerText = "You win!";
+            uniqueCode.innerText = `Unique Code: ${code}`; // Tampilkan kode unik
+            instructionMessage.innerText = "Selamat! Kamu berhak mendapatkan satu produk Healthy Food yang bisa dipilih melalui kasir kami di atas, silahkan screenshoot dan tunjukkan halaman ini yaa teman luvium😊";
+        } else {
+            resultMessage.innerText = "You lose!";
+            uniqueCode.innerText = "Tidak ada kode unik yang ditemukan.";
+            instructionMessage.innerText = "Yahh, kamu belum beruntung nihh, coba lagi yaaa😉";
+        }
+
+        // Menghapus kode unik dari localStorage setelah ditampilkan
+        localStorage.removeItem('uniqueCode');
+    </script>
+</body>
+</html>
