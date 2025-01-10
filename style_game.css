@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%; /* Make sure the body takes up full height */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    position: relative;
+    width: 375px; /* Fixed width for mobile simulation */
+    height: 667px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 2px solid #000;
+}
+
+.play-area {
+    padding-top: 200px;
+    background-image: url("Asset Interface 2-01.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    flex: 1;
+    gap: 90px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    height: 100%; 
+}
+
+.goal-zone {
+    position: absolute;
+    width: 50%; /* Make it cover the goal area */
+    height: 15%; /* Adjust height as necessary */
+    z-index: 2;
+    cursor: pointer; /* Indicate it can be interacted with */
+}
+
+.ball {
+    width: 50px;
+    z-index: 3;
+    cursor: grab;
+}
+
+.ball.active {
+    cursor: grabbing;
+}
+
+.goalkeeper {
+    width: 70px; /* Adjust size as needed */
+    z-index: 3; /* Make sure it stays on top of the background */
+    transition: transform 0.3s; /* Smooth transition for movement */
+}
+
+/* Controls styling */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hide controls on mobile */
+@media (max-width: 768px) {
+    .controls {
+        display: none; /* Hide buttons on mobile devices */
+    }
+}
+
+/* Popup Notification Styling */
+.notification {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    z-index: 4; /* Ensure it is above everything */
+    text-align: center;
+}
+
+.nyawa{
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+}
+.nyawa > img{
+    width: 20px;
+    height: 20px;
+    opacity: 30%;
+}
