@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penalty Shoot Game</title>
+    <link rel="stylesheet" href="style_game.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="nyawa">
+            <img src="ball.png" alt="" class="life nyawa1">
+            <img src="ball.png" alt="" class="life nyawa2">
+            <img src="ball.png" alt="" class="life nyawa3">
+            <img src="ball.png" alt="" class="life nyawa4">
+            <img src="ball.png" alt="" class="life nyawa5">
+        </div>
+        <div class="play-area">
+            <div class="goal-zone"></div> <!-- Single goal zone -->
+            <img src="goalkeeper.png" alt="Goalkeeper" class="goalkeeper" id="goalkeeper"> <!-- Kiper -->
+            <img src="ball.png" alt="Soccer Ball" class="ball" id="ball">
+        </div>
+        <div class="controls">
+            <button id="leftBtn">Left</button>
+            <button id="centerBtn">Center</button>
+            <button id="rightBtn">Right</button>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div> <!-- Popup notification -->
+
+    <!-- Tambahkan elemen audio -->
+    <audio id="goalSound" src="bola_goal.wav"></audio>
+<audio id="missSound" src="bola_miss.wav"></audio>
+<audio id="gameOverSound" src="gameover_boladibawah3.wav"></audio>
+<audio id="gameWin" src="game_win.wav"></audio>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
