@@ -1,0 +1,88 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%; /* Make sure the body takes up full height */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background styling */
+.background {
+    color: #e0e0e0;
+    min-height: 100vh; /* Ensure the background takes at least full screen height */
+    background-image: url('Asset Interface Thanks-01.png'); /* Background image */
+    background-size: contain; /* Ensure the image fits within the background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px; /* Add padding to prevent overflow on small devices */
+    box-sizing: border-box;
+}
+
+/* Box for blur effect */
+.blur-background {
+    position: absolute; /* Make it absolute to cover the whole background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background for contrast */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: 1; /* Ensure it's behind the text */
+}
+
+/* Main text styling */
+.message {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    position: relative; /* Allow text to be on top of the blur */
+    z-index: 2; /* Ensure it stays on top */
+}
+
+.unique-code {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0;
+    position: relative; /* Allow text to be on top of the blur */
+    z-index: 2; /* Ensure it stays on top */
+}
+
+.instruction {
+    font-size: 16px;
+    padding: 20px 60px;
+    text-align: center;
+    position: relative; /* Allow text to be on top of the blur */
+    z-index: 2; /* Ensure it stays on top */
+}
+
+/* Box styling for frame */
+.text {
+    display: flex;
+    justify-content: center;
+    color: black;
+    max-width: 400px;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 250, 240, 0.8); /* Menggunakan warna dengan transparansi */
+    backdrop-filter: blur(10px); /* Menambahkan efek blur */
+    position: relative; /* Allow for positioning of inner elements */
+    z-index: 2; /* Ensure it stays on top of the blur */
+    border-radius: 10px; /* Optional: rounded corners for better aesthetics */
+}
+
