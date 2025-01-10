@@ -1,0 +1,122 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden; /* Prevent scrolling */
+    height: 100%; /* Make sure the body takes up full height */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+/* Background styling */
+.background {
+    min-height: 90vh; /* Ensure the background takes at least full screen height */
+    background-image: url('background.png'); /* Background image */
+    background-size: contain; /* Ensure the image fits within the background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px; /* Add padding to prevent overflow on small devices */
+    box-sizing: border-box;
+}
+
+/* Main text styling */
+.maintext img {
+    transform: translateY(-35px);
+    width: 20vw;
+    max-width: 100%; /* Ensure image doesn't exceed the container width */
+}
+
+/* Form box styling */
+.box_form {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for form */
+    width: 90%; /* Adjust form width */
+    max-width: 400px; /* Limit form width on larger screens */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Input fields styling */
+.box_form input {
+    width: 100%; /* Full width */
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.box_form button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button > img {
+    width: 60%; /* Adjust image width for button */
+}
+
+/* Hide spinner on number input */
+#whatsapp {
+    overflow: hidden;
+    -moz-appearance: textfield; /* Firefox */
+}
+
+#whatsapp::-webkit-inner-spin-button,
+#whatsapp::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 768px) {
+    .maintext img {
+        width: 50vw; /* Make image larger on smaller screens */
+    }
+
+    .box_form {
+        width: 100%; /* Form takes full width on small screens */
+    }
+
+    button > img {
+        width: 100%; /* Adjust button image size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .maintext img {
+        width: 50vw; /* Further scale down image */
+    }
+
+    .box_form {
+        width: 100%; /* Ensure the form fits small mobile screens */
+    }
+
+    button > img {
+        width: 60%; /* Further scale down button image */
+    }
+}
